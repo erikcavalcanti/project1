@@ -26,9 +26,9 @@ jobs:
       - run:
           name: Push code
           command: git add .
-      - run:
-          name: Commit code
-          command: git commit -m "integration"
+#       - run:
+#           name: Commit code
+#           command: git commit -m "integration"
       - run:
           name: Push code
           command: git push adobe main --force

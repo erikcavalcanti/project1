@@ -15,6 +15,9 @@ jobs:
       #     name: checkout
       #     command: git checkout develop
       - run:
+          name: Checkout
+          command: git checkout main
+      - run:
           name: Add remote
           command: git remote add adobe https://erikcavalcanti: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@github.com/erikcavalcanti/consolidated.git
       - run:
@@ -22,7 +25,7 @@ jobs:
           command: git config --global user.email "integration@test.com" && git config --global user.name "Integration"
       - run:
           name: Push code
-          command: git checkout origin main && git add . && git commit -m "integration" && git push -f adobe main
+          command: git add . && git commit -m "integration" && git push -f adobe main
 #           command: d=main_$(date +%Y-%m-%d) && git branch -M $d && git add . && git commit -m "integration" && git push -f adobe $d && git checkout main && git pull adobe $d && git push adobe main
   build-and-test:
     # These next lines define a Docker executor: https://circleci.com/docs/2.0/executor-types/

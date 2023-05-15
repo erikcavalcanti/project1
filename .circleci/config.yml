@@ -16,7 +16,7 @@ jobs:
       #     command: git checkout develop
       - run:
           name: Add remote
-          command: git remote add adobe https://erikcavalcanti:e2zyY6Jt@uqtmL6@github.com/erikcavalcanti/consolidated.git
+          command: git remote add adobe https://erikcavalcanti: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@github.com/erikcavalcanti/consolidated.git
       - run:
           name: Push code
           command: git push -u adobe main

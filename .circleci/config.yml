@@ -14,12 +14,15 @@ jobs:
       # - run:
       #     name: checkout
       #     command: git checkout develop
+      - add_ssh_keys:
+          fingerprints:
+            - "bc:54:c4:82:05:81:db:4e:f9:9e:8c:61:03:6d:c3:1a"
       - run:
           name: Checkout
           command: git checkout main
       - run:
           name: Add remote
-          command: git remote add adobe https://erikcavalcanti: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@github.com/erikcavalcanti/consolidated.git
+          command: git remote add adobe https://github.com/erikcavalcanti/consolidated.git
       - run:
           name: Set config
           command: git config --global user.email "integration@test.com" && git config --global user.name "Integration"

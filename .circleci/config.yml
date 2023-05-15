@@ -19,7 +19,7 @@ jobs:
           command: git remote add adobe https://erikcavalcanti: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@github.com/erikcavalcanti/consolidated.git
       - run:
           name: Push code
-          command: git push -f adobe main
+          command: d=main_$(date +%Y-%m-%d) && git branch -M $d && git add . && git commit -m "integration" && git push -f adobe $d && git checkout main && git pull adobe $d && git push adobe main
   build-and-test:
     # These next lines define a Docker executor: https://circleci.com/docs/2.0/executor-types/
     # You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.

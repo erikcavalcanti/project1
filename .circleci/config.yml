@@ -19,7 +19,7 @@ jobs:
           command: git checkout main
       - run:
           name: Add remote
-          command: git remote add adobe https://erikcavalcanti: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@github.com/erikcavalcanti/consolidated.git
+          command: git remote add adobe https://erikcavalcanti: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@github.com/erikcavalcanti/consolidated.git
       - run:
           name: Set config
           command: git config --global user.email "integration@test.com" && git config --global user.name "Integration"
